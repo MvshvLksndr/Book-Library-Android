@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_book">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Добавить новую книгу"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
+    <EditText
+        android:id="@+id/bookYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Год издания"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="67dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Название книги"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="112dp"
+        />
+
+    <EditText
+        android:id="@+id/bookAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Автор"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="157dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
