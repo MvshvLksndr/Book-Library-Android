@@ -38,7 +38,7 @@ public class add_book extends AppCompatActivity {
 
     void AddBook(int year, String name, String author){
 
-        Intent bookList = new Intent(this, book_list.class);
+        Intent bookList = new Intent(this, MainActivity.class);
         bookList.putExtra("year", year);
         bookList.putExtra("name", name);
         bookList.putExtra("author", author);
