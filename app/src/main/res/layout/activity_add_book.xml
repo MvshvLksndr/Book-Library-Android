@@ -7,19 +7,24 @@
     tools:context=".add_book">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="Добавить новую книгу"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/bookYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="67dp"
         android:hint="Год издания"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="67dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -27,8 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Название книги"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="112dp"
+        app:layout_constraintStart_toStartOf="@+id/bookYear"
+        app:layout_constraintTop_toBottomOf="@+id/bookYear"
+
         />
 
     <EditText
@@ -36,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Автор"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="157dp"/>
+        app:layout_constraintStart_toStartOf="@+id/bookName"
+        app:layout_constraintTop_toBottomOf="@+id/bookName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
