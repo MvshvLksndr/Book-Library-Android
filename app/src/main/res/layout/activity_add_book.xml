@@ -8,13 +8,16 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Добавить новую книгу"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
     <EditText
         android:id="@+id/bookYear"
@@ -44,5 +47,17 @@
         android:hint="Автор книги"
         app:layout_constraintStart_toStartOf="@+id/bookName"
         app:layout_constraintTop_toBottomOf="@+id/bookName" />
+
+    <Button
+        android:id="@+id/AddBookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="29dp"
+        android:text="Добавить"
+        app:layout_constraintStart_toEndOf="@+id/bookAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/bookAuthor">
+
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
