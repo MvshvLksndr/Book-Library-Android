@@ -9,4 +9,14 @@ public class Book {
             Name = name;
             Author = author;
         }
+
+    public  String GetName(){
+        return this.Name;
+    }
+    public  String GetAuthor(){
+        return this.Author;
+    }
+    public  int GetYear(){
+        return  this.Year;
+    }
 }
