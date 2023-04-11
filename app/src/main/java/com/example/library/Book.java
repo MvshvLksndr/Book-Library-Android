@@ -4,10 +4,13 @@ public class Book {
     int Year;
     String Name;
     String Author;
-    Book(int year, String name, String author){
+    boolean Add = false;
+    Book(int year, String name, String author, boolean add){
+
             Year = year;
             Name = name;
             Author = author;
+            Add = add;
         }
 
     public  String GetName(){
@@ -18,5 +21,14 @@ public class Book {
     }
     public  int GetYear(){
         return  this.Year;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "Year=" + Year +
+                ", Name='" + Name + '\'' +
+                ", Author='" + Author + '\'' +
+                '}';
     }
 }

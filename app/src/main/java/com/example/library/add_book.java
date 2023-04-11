@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class add_book extends AppCompatActivity {
 
@@ -33,14 +34,27 @@ public class add_book extends AppCompatActivity {
             }
         });
     }
+    public void addBookClicked(View view){
+        EditText author = findViewById(R.id.bookAuthor);
+        String stAuthor = author.getText().toString();
+
+        EditText name = findViewById(R.id.bookName);
+        String strName = name.getText().toString();
+
+        AddBook(1, strName, stAuthor);
+    }
 
 
 
     void AddBook(int year, String name, String author){
 
-        Intent bookList = new Intent(this, MainActivity.class);
+        Intent bookList = new Intent(this, book_list.class);
         bookList.putExtra("year", year);
         bookList.putExtra("name", name);
         bookList.putExtra("author", author);
+
+        Toast.makeText(this, "Книга добавлена", Toast.LENGTH_SHORT).show();
+        startActivity(bookList);
+
     }
 }
