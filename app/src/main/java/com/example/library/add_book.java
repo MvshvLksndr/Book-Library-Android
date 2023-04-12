@@ -22,6 +22,7 @@ public class add_book extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
 
+        getSupportActionBar().hide();
 
     }
     public void addBookClicked(View view){

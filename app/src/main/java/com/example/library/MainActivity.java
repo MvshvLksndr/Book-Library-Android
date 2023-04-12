@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
         Toast.makeText(this, "Сделал Александр Мовшев", Toast.LENGTH_SHORT).show();
     }
 
