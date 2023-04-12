@@ -13,19 +13,27 @@ import java.util.List;
 
 public class book_list extends AppCompatActivity {
 
-    ArrayList<Book> books =new ArrayList<Book>();
+    BookStorage storage = BookStorage.getInstance();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_list);
 
-        AddNewBook();
 
-        ArrayAdapter<Book> adapter = new ArrayAdapter<Book>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, books);
-        ListView lwBooks = findViewById(R.id.lwBooks);
+        ArrayList<Book> books = storage.getBookList();
 
-        lwBooks.setAdapter(adapter);
+        if(books != null){
+
+            ArrayAdapter<Book> adapter = new ArrayAdapter<Book>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, books);
+            ListView lwBooks = findViewById(R.id.lwBooks);
+
+            lwBooks.setAdapter(adapter);
+        }
+
     }
+    //вроде больше не нужно но удалять страшно
     void AddNewBook(){
         Bundle args = getIntent().getExtras();
         boolean add = args.getBoolean("isAdd");
@@ -37,6 +45,6 @@ public class book_list extends AppCompatActivity {
 
 
         
-        books.add(new Book(year, name, author, add));
+        //books.add(new Book(year, name, author, add));
     }
 }

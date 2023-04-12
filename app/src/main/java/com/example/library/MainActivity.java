@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void bookListClicked(View view){
         Intent bookList = new Intent(this, book_list.class);
-        bookList.putExtra("idAdd", false);
+        //bookList.putExtra("idAdd", false);
         startActivity(bookList);
     }
 
