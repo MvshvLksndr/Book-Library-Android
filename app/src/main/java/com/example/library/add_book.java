@@ -52,6 +52,7 @@ public class add_book extends AppCompatActivity {
         bookList.putExtra("year", year);
         bookList.putExtra("name", name);
         bookList.putExtra("author", author);
+        bookList.putExtra("isAdd", true);
 
         Toast.makeText(this, "Книга добавлена", Toast.LENGTH_SHORT).show();
         startActivity(bookList);

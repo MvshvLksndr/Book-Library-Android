@@ -8,11 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class book_list extends AppCompatActivity {
 
-    List<Book> books;
+    ArrayList<Book> books =new ArrayList<Book>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +35,8 @@ public class book_list extends AppCompatActivity {
         String name = args.getString("name");
         String author = args.getString("author");
 
-        Book bookToAdd = new Book(year, name, author, add);
 
-        books.add(bookToAdd);
+        
+        books.add(new Book(year, name, author, add));
     }
 }
