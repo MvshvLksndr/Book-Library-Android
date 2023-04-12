@@ -19,6 +19,9 @@ public class book_list extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_book_list);
 
 
@@ -26,25 +29,12 @@ public class book_list extends AppCompatActivity {
 
         if(books != null){
 
-            ArrayAdapter<Book> adapter = new ArrayAdapter<Book>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, books);
+            BookAdapter adapter = new BookAdapter(this, R.layout.book_list_item, books);
+
             ListView lwBooks = findViewById(R.id.lwBooks);
 
             lwBooks.setAdapter(adapter);
         }
-
     }
-    //вроде больше не нужно но удалять страшно
-    void AddNewBook(){
-        Bundle args = getIntent().getExtras();
-        boolean add = args.getBoolean("isAdd");
-        Toast.makeText(this, "Книга не добавлена", Toast.LENGTH_SHORT).show();
-        if(add == false) return;
-        int year = args.getInt("year");
-        String name = args.getString("name");
-        String author = args.getString("author");
 
-
-        
-        //books.add(new Book(year, name, author, add));
-    }
 }

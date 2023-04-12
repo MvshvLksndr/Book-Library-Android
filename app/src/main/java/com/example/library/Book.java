@@ -27,8 +27,8 @@ public class Book {
         return this.Name;
     }
 
-    public int getYear() {
-        return this.Year;
+    public String getYear() {
+        return String.valueOf(Year) + " г.";
     }
 
     public String getAuthor() {

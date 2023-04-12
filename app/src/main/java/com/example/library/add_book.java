@@ -34,8 +34,6 @@ public class add_book extends AppCompatActivity {
         }
         int intYear = Integer.parseInt(strYear);
 
-
-
         EditText name = findViewById(R.id.bookName);
         String strName = name.getText().toString();
 
@@ -53,21 +51,9 @@ public class add_book extends AppCompatActivity {
         }
 
         storage.addBook(new Book(intYear, strName, stAuthor));
+
+        Toast.makeText(this, "Книга добавлена в список!", Toast.LENGTH_SHORT).show();
+        finish();
         //AddBook(1, strName, stAuthor);
-    }
-
-
-
-    void AddBook(int year, String name, String author){
-
-        Intent bookList = new Intent(this, book_list.class);
-        bookList.putExtra("year", year);
-        bookList.putExtra("name", name);
-        bookList.putExtra("author", author);
-        bookList.putExtra("isAdd", true);
-
-        Toast.makeText(this, "Книга добавлена", Toast.LENGTH_SHORT).show();
-        startActivity(bookList);
-
     }
 }

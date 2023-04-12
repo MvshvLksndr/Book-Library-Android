@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(this, "Сделал Александр Мовшев", Toast.LENGTH_SHORT).show();
     }
 
     public void bookListClicked(View view){
